@@ -1,0 +1,69 @@
+.image{
+  max-height: 500px;
+}
+.header{
+  margin-top: 70px;
+}
+.nav_icon{
+  height: 2.7rem;
+  width: 2.8rem;
+}
+.navbar{
+  height: 4.4rem;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+}
+.navbar-brand{
+  font-size: 1.4em;
+  display: flex;
+  align-items: flex-end;
+}
+/* body{
+  font-family: 'Nunito Sans', sans-serif;
+} */
+.header .content p{
+  font-weight: 300;
+  opacity: 0.8;
+}
+.header .content h1{
+  font-weight: 500;
+  color: rgb(8, 28, 70);
+  /* animation: 0.5s ease-out slideInFromLeft; */
+}
+/* @keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-300%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+.header .content button{
+  font-size: 1.1em;
+}
+
+.header .content .icons{
+  height: 70px;
+  transition: transform 0.4s;
+  /* animation: 0.5s ease-out slideInFromLeft; */
+}
+.header .content .icons:hover{
+  transform: scale(1.35);
+  opacity: 0.85;
+}
+.header .functions{
+  text-align: center;
+  padding-top: 15px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.header .functions p{
+  color: rgb(6, 21, 70);
+}
+body{
+  background-image: url('./assets/background-02-01.svg');
+  /* background-repeat: repeat-x; */
+  /* background-size: cover; */
+  /* background-position: left top; */
+  background-color: rgb(250, 250, 250);
+}
