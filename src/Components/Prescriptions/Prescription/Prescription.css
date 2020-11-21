@@ -3,4 +3,18 @@
     border: 2px solid lightseagreen;
     box-shadow: 7px 8px #eeeeee;
     font-family: cursive;
+    width: '15rem';
+    margin-right: '2rem';
+    margin-bottom: '1rem';
+    
+}
+.sd {
+    border: 2px solid lightseagreen !important;
+}
+.card-body {
+    background-color: orange;
+}
+.card-title {
+    text-align: center;
+    color: red
 }

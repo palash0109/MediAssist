@@ -3,7 +3,7 @@ import { Card } from 'react-bootstrap';
 import './Prescription.css';
 const prescription = props => {
     return (
-        <Card style={{ width: '15rem', marginRight: '1rem', marginBottom: '1rem', border: '2px solid lightseagreen'}}>
+        <Card style={{ width: '15rem', marginRight: '1rem', marginBottom: '1rem'}} className="sd">
             <Card.Img variant="top" src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/medical-logo.jpg" />
             <Card.Body>
                 <Card.Title>Disease Name</Card.Title>
