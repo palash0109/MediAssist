@@ -1,0 +1,7 @@
+.AddButton {
+    width: 8%;
+    height: 40px;
+    cursor: pointer;
+    background-color: lightgreen;
+    float: right;
+}
