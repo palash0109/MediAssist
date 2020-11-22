@@ -6,7 +6,7 @@ import '../Css/Navigation.css'
 function Navigation_Bar() {
     return (
         <div className="navigation">
-            <Navbar collapseOnSelect fixed="top" expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="/">
                     <img className="nav_icon pr-2" src={Nav_Icon}/>

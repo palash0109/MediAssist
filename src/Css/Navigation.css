@@ -6,6 +6,7 @@
     height: 4.4rem;
     font-size: 1.1em;
     /* font-family: 'Roboto', sans-serif; */
+    position: relative;
   }
   .navbar-brand{
     font-size: 1.4em;
