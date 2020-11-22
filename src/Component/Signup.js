@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Form, Button,Image } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from '../Assets/landing_image-01-01-01.svg'
+import img from '../Assets/Login_Signup-01.svg';
 import Navigator2 from './Navigator2'
+import '../Css/Login_Signup.css';
 
 function Signup() {
 	const [name, setName] = useState("");
@@ -20,13 +21,14 @@ function Signup() {
 
 
 	return (
-		<div className="container top1">
-			<div className="row align-items-left border-class form-back border shadow">
-				<div className='col-md-6 col-sm-12 d-none d-sm-block '>
+		<div className="signup_up">
+		<div className="container signup">
+			<div className="row justify-content-center border-class form-back border shadow">
+				<div className='col-md-6 col-sm-12 d-none d-md-block pl-0'>
 				<Image  className="border-right border-black img1"src={img}  />
 				</div>
 				<div className="col-md-5 col-sm-12 ">
-					<h3>SignUp</h3>
+					<h3 className="text-center" >SignUp</h3>
 					<Form onSubmit={handleSubmit} >
 						<Form.Group controlId="formName">
 							<Form.Label>Name</Form.Label>
@@ -59,13 +61,14 @@ function Signup() {
 							<Form.Control type="password" placeholder="Password"
 								value={cpassword} onChange={(e) => setCPassword(e.target.cpassword)} />
 						</Form.Group>
-						<Button variant="primary" type="submit" disabled={!validateForm()}>
+						<Button variant="primary" className="center" type="submit" disabled={!validateForm()}>
 							Submit
 						</Button>
 						<Navigator2 />
 					</Form>
 				</div>
 			</div>
+		</div>
 		</div>
 	)
 }

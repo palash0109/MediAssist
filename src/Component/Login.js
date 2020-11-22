@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Form, Button , Image } from 'react-bootstrap'
+import img from '../Assets/Login_Signup-01.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import img from '../Assets/landing_image-01-01-01.svg'
-import Navigator from './Navigator'
+import Navigator from './Navigator';
+import '../Css/Login_Signup.css';
 
 function Login() {
 	const [email, setEmail] = useState("");
@@ -14,17 +15,18 @@ function Login() {
 		alert("The form is summited")
 	  }
 	  function validateForm() {
-		return (email.includes('@') && email.length>8) && password.length > 3;
+		return (email.includes('@') && email.length >8) && password.length > 3;
 	  }
 
 	return (
-		<div className="container top ">
+		<div className="login_up">
+		<div className="container login ">
 			<div className="row  justify-content-center align-items-center form-back border shadow">
-				<div className='col-md-6 d-none d-sm-block'>
+				<div className='col-md-6 d-none d-md-block pl-0'>
 				<Image  className="border-right border-black" src={img} rounded />
 				</div>
 				<div className="col-md-5 col-sm-12 m-sm-2 ">
-					<h3>Login</h3>
+					<h3 className="text-center" >Login</h3>
 					<Form onSubmit={handleSubmit} >
 						<Form.Group controlId="formBasicEmail">
 							<Form.Label>Email address</Form.Label>
@@ -55,6 +57,7 @@ function Login() {
 					</Form>
 				</div>
 			</div>
+		</div>
 		</div>
 	)
 }
