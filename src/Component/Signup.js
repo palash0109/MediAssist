@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Button,Image } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import img from '../Assets/Login_Signup-01.svg';
-import Navigator2 from './Navigator2'
 import '../Css/Login_Signup.css';
 
 function Signup() {
@@ -61,10 +61,12 @@ function Signup() {
 							<Form.Control type="password" placeholder="Password"
 								value={cpassword} onChange={(e) => setCPassword(e.target.cpassword)} />
 						</Form.Group>
-						<Button variant="primary" className="center" type="submit" disabled={!validateForm()}>
+						<div className="d-flex justify-content-center" >
+						<Button variant="primary" className="mb-3" type="submit" disabled={!validateForm()}>
 							Submit
 						</Button>
-						<Navigator2 />
+						</div>
+						<h6 className="text-center">Already a User ! Login <NavLink to='/login'>here</NavLink></h6>
 					</Form>
 				</div>
 			</div>

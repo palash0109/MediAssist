@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Form, Button , Image } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import img from '../Assets/Login_Signup-01.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigator from './Navigator';
 import '../Css/Login_Signup.css';
 
 function Login() {
@@ -47,13 +47,12 @@ function Login() {
 						<Form.Group controlId="formBasicCheckbox">
 							<Form.Check type="checkbox" label="Remember Me!" />
 						</Form.Group>
-
-						<Button classname="button-color"  type="submit"  disabled={!validateForm()}>
-							Submit
-						</Button>
-						<div >
-							<Navigator />
+						<div className="d-flex justify-content-center">
+							<Button className="mb-3"  type="submit"  disabled={!validateForm()}>
+								Submit
+							</Button>
 						</div>
+						<h6 className="text-center">New user! Register <NavLink to='/signup'>here</NavLink></h6>
 					</Form>
 				</div>
 			</div>

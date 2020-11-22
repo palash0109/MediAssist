@@ -5,10 +5,16 @@
   .navbar{
     height: 4.4rem;
     font-size: 1.1em;
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
   }
   .navbar-brand{
     font-size: 1.4em;
     display: flex;
     align-items: flex-end;
   }
+  @media (max-width: 991px)
+  {
+.navbar {
+    background-color: #35424e;
+}
+}
