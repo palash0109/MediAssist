@@ -23,17 +23,22 @@ function AddForm() {
 		e.preventDefault();
 		setInputFields([...inputFields, { medicineName: '', days: null, perday: null }])
 	}
+	const deleteItem = (i) => {
+		
+		setInputFields(currentItems => currentItems.filter((input, index) => index !== i));
+	  }
 
 	function handleSubmit() {
 		alert("Formed Filled Up")
 	}
+
 	return (
-		<div >
-			<div className="container">
-				<div className="row  align-items-left border box-shadow" >
-					<div className="col-md-6 col-sm-12 ">
-						<h1 className="text-center">The Patient Form</h1>
-						<Form >
+		<div className='container mt-3'>
+			<div className="layout">
+				{/* <div className="row  align-items-left border box-shadow" >
+					<div className="col-md-6 col-sm-12 "> */}
+						<Form className="form-layout box-shadow" >
+						<h1 className="text-center">Health-Care</h1>
 							<Form >
 								<Form.Group controlId="formBasicName">
 									<Form.Label>Doctor's Name</Form.Label>
@@ -52,9 +57,7 @@ function AddForm() {
 										value={date} onChange={(e) => setDate(e.target.value)} />
 								</Form.Group>
 								<Form.Group>
-									<Form.Text >
-										Select the type of Doctor
-    							</Form.Text>
+									<Form.Label>Doctor's Type</Form.Label>
 									<Form.Control as="select" value={doctorType} onChange={(e) => setDoctorType(e.target.value)}>
 										<option>General Physician </option>
 										<option>Paediatrician</option>
@@ -70,13 +73,15 @@ function AddForm() {
 								</Form.Group>
 							</Form>
 							<Form >
-								{inputFields.map(e => (
-									<div>
-										<Form.Group className="form-inline">
+								{inputFields.map((input,i) => (
+									<div >
+										<Form.Group className="form-inline" key={i}>
 											<Form.Control type="text" placeholder="Medicine Name" className="col-sm-4 mr-2 mt-3" />
-											<Form.Control type="number" min="1"  placeholder="N of Days" className="col-sm-3 mr-2 mt-3" />
+											<Form.Control type="number" min="1"  placeholder="No of Days" className="col-sm-3 mr-2 mt-3" />
 											<Form.Control type="number" min="1"  placeholder="Per-Day" className="col-sm-3 mt-3" />
 										</Form.Group>
+										<Button type="submit" variant="warning" onClick={() => deleteItem(i)} >Remove</Button>
+
 									</div>))}
 
 							</Form>
@@ -84,13 +89,14 @@ function AddForm() {
 								Add More Prescription
   								</Button>
 							<Button onClick={handleSubmit}  >Submit</Button>
+
 						</Form>
 					</div>
-					<div className='col-md-6 col-sm-12 d-none d-sm-block '>
+					{/* <div className='col-md-6 col-sm-12 d-none d-sm-block '>
 						<Image className="border-left border-black img1" src={img} />
-					</div>
-				</div>
-			</div>
+					</div> */}
+				{/* </div>
+			</div> */}
 		</div>
 
 	)

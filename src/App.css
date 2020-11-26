@@ -1,8 +1,31 @@
+body
+{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+}
 .App
 {
-  /* background-image: linear-gradient(to right, red , yellow); */
-  z-index: -1;
+  margin:0px;
+  padding:0px;
 }
+.App::before{
+  content: '';
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	 background-image: url('./Assests/syringe-1884784.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-background-size: cover;
+	background-size: cover;
+	 -webkit-filter: blur(3px);
+	-moz-filter: blur(3px);
+	filter: blur(2px);
+	z-index: -1;
+}
+
 
 
 

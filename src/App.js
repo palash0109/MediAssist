@@ -7,9 +7,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="justify-content-center" >
+    <div className="App" >
     <AddForm/>
-
     </div>
   );
 }

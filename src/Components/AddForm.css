@@ -1,48 +1,93 @@
+.layout
+{
+	margin:auto;
+	width:65%;
+
+}
+@media only screen and (max-width:1024px)
+{
+	.layout{
+		margin:auto;
+		width:90%
+	}
+}
 .container
 {
-	margin-top:0%;
+
 	z-index: 0;
+
+}
+.text-center
+{
+	color:rgb(255, 255, 255);
+	font-family: 'Raleway', sans-serif;
+}
+.form-label
+{
+   font-size: 1.2rem;
+   /* color:rgb(2, 58, 83); */
+   color:rgb(255, 255, 255)
 }
 .form-text
 {
 	font-size: medium;
 }
-.border
+.form-layout
 {
 
 	/* border: rgb(19, 19, 241) solid !important; */
-	background-color: rgb(248, 248, 248);
-	margin:20px;
-	padding:20px;
+	border: rgb(239 239 246) solid !important;
+	/* background-color:rgba(166 219 235,0.5); */
+	background-color: rgba(37, 37, 37, 0.3);
+	/* background-color:rgba(199, 223, 234, 0.53); */
+	margin-top:3%;
+	border-radius:8px;
+	padding:inherit;
+
+	padding: 3%;
+	font-family: 'Nunito', sans-serif;
+
+
+}
+.form-control
+{
+	border-bottom: 1px solid rgb(3, 36, 80)  !important;
+	background-color: snow !important;
+
 }
 .box-shadow
 {
+	box-shadow: 0 4px 8px 0 rgba(41, 40, 40, 0.2), 0 6px 20px 0 rgba(17, 17, 17, 0.19) !important;
+}
+
+.btn-warning
+{
+
+	background-color: rgb(5, 82, 107) !important;
+	color:white !important;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+	border:thin white !important;
+
+}
+.btn-warning:hover
+{
+    background-color: rgb(3, 52, 68) !important;
+	color:white !important;
 }
 button.btn.btn-primary {
 	display: block;
 	margin-top:5%;
-	background-color: rgb(3, 36, 80) !important;
+
+	background-color:rgb(3,52,68) !important;
 	color:white !important;
-	border:thin white !important;
+	border:thin rgb(250, 249, 249) !important;
+	margin-bottom:3%;
 }
 button.btn.btn-primary:hover{
 
 	color: rgb(231, 233, 236) !important;
-	background-color: rgb(6, 53, 116) !important;
-
-}
-.btn-warning
-{
-	background-color: rgb(3, 52, 68) !important;
-	color:white !important;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
-	border:thin white !important;
-}
-.btn-warning:hover
-{
 	background-color: rgb(5, 82, 107) !important;
-	color:white !important;
+
 }
 .img1
 {
