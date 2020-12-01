@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signup from './Component/Signup';
 import Landing_Page from './Pages/Landing_Page';
 import NavBar from './Component/Navigation';
+import HomePage from './Pages/Home_Page';
+import AddForm from './Component/AddForm';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Route exact path='/' component={Landing_Page}></Route>
             <Route exact path='/login' component={Login}></Route>
             <Route path='/signup' component={Signup} ></Route>
+            <Route path='/home' component={HomePage} ></Route>
+            <Route path='/add' component={AddForm} ></Route>
         </Switch>
       </>
   );
